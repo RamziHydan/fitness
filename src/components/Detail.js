@@ -12,16 +12,19 @@ const Detail = ({exerciseDetail}) => {
 
     const extraDetail = [
         {
-            icon:BodyPartImage,
-            name:bodyPart,
+            id: 'body-part',
+            icon: BodyPartImage,
+            name: bodyPart,
         },
         {
-            icon:TargetImage,
-            name:target,
+            id: 'target',
+            icon: TargetImage,
+            name: target,
         },
         {
-            icon:EquipmentImage,
-            name:bodyPart,
+            id: 'equipment',
+            icon: EquipmentImage,
+            name: equipment,
         }
     ]
   return (
@@ -37,9 +40,9 @@ const Detail = ({exerciseDetail}) => {
                 improve you mood and  gain energy.
             </Typography>
             {extraDetail.map((item)=>(
-                <Stack key={item.name} direction="row" gap='24px' alignItems='center' >
+                <Stack key={item.id} direction="row" gap='24px' alignItems='center' >
                     <Button sx={{ background:"#fff2db", borderRadius:'100%', width:'100px', height:'100px' }} >
-                        <img src={item.icon} />
+                        <img src={item.icon} alt={item.name} />
                     </Button>
                     <Typography textTransform='capitalize' variant='h6'>
                         {item.name}

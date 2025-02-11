@@ -28,13 +28,17 @@ body {
     border-radius: 4px;
     position: absolute;
     bottom: -20px;
-    right: 80px;
     transform: scale(1, 1);
     transition: 0.3s all ease-in-out;
+    z-index: 100;
+  }
+  
+  .left-arrow {
+    left: 0px;
   }
   
   .right-arrow {
-    right: 140px;
+    right: 0px;
   }
   
   .right-arrow:hover,
@@ -46,6 +50,16 @@ body {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
+    position: relative;
+    padding: 0 40px;
+  }
+  
+  .react-horizontal-scrolling-menu--scroll-container {
+    width: 100%;
+  }
+  
+  .react-horizontal-scrolling-menu--item {
+    margin: 0 8px;
   }
   
   .detail-image {
